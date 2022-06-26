@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.container {
+  width: 400px;
+  min-height: 400px;
+  background: linear-gradient(135deg, rgb(206, 9, 69), rgb(94, 1, 29));
+  border-radius: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  padding: 40px 30px;
+}
+.container .login-text {
+  color: rgb(222, 222, 222);
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 20px;
+  display: block;
+}
+.reg-text {
+  color: rgb(222, 222, 222);
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 8px;
+  display: block;
+}
+.container .login-social {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+}
+.container .login-social a {
+  padding: 8px 10px;
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  color: rgb(250, 250, 250);
+  background-color: rgb(47, 47, 48);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  transition: 0.3s;
+  display: flex;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+}
+.container .login-social a i {
+  margin-right: 10px;
+}
+.container .login-social a.facebook {
+  background: #4256b1;
+}
+.container .login-social a.twitter {
+  background: #1da1f2;
+}
+.container .login-social a.google {
+  background: #db4a39;
+}
+.container .login-social a.linkedin {
+  background: #0e76a8;
+}
+.container .login-social a.facebook:hover {
+  background: #364791;
+}
+.container .login-social a.twitter:hover {
+  background: #1988cd;
+}
+.container .login-social a.google:hover {
+  background: #c04132;
+}
+.container .login-social a.linkedin:hover {
+  background: #095477;
+}
+.container .login-email .input-group {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 25px;
+}
+.container .login-email .input-group input {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #e7e7e7;
+  border-radius: 10px;
+  padding: 15px 20px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+.container .login-email .input-group input:focus,
+.container .login-email .input-group input:valid {
+  border: 3.5px solid rgb(253, 44, 117);
+  transition: 0.3s;
+}
+
+.container .login-email .input-group .loginbtn,
+.regbtn {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  border: none;
+  color: rgb(0, 0, 0);
+  background: #fff;
+  outline: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.container .login-email .input-group .loginbtn:hover,
+.regbtn:hover {
+  background: linear-gradient(135deg, rgb(206, 9, 69), rgb(94, 1, 29));
+  border-radius: 12px;
+  color: #fff;
+  transition: 0.3s;
+}

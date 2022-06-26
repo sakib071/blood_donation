@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: grid;
+  height: 80vh;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+.titletag h1 {
+  margin: 10px;
+
+  font-size: 83px;
+  color: rgb(206, 9, 69);
+  text-align: center;
+  border-radius: 25px;
+  font-family: "Lemon Milk", sans-serif;
+}
+.container {
+  max-width: 900px;
+  width: 100%;
+  padding: 25px 30px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgb(206, 9, 69), rgb(94, 1, 29));
+  color: #fff;
+}
+.container .title {
+  font-size: 35px;
+  font-weight: 500;
+  position: relative;
+  color: #fff;
+  letter-spacing: 2px;
+}
+.container .title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 44px;
+  background: rgb(94, 1, 29);
+}
+.table {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+.table {
+  color: #fff;
+}
+.back {
+  margin: auto;
+  width: 30%;
+  height: 40px;
+  border: none;
+  color: rgb(0, 0, 0);
+  background: #fff;
+  outline: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.back:hover {
+  background: linear-gradient(135deg, rgb(206, 9, 69), rgb(94, 1, 29));
+  border-radius: 12px;
+  color: #fff;
+  transition: 0.3s;
+}
+@media (max-width: 584px) {
+  .container {
+    max-width: 100%;
+  }
+  form .user-details .input-box {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .gender-details .category {
+    width: 100%;
+  }
+  .container form .user-details {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar {
+    width: 0;
+  }
+}
