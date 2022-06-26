@@ -36,7 +36,7 @@
     height: 3px;
     border-radius: 1.5px;
     background-color: #ffffff;
-    transition: .4s;
+    transition: .2s;
 }
 .hamburger>div:before, .hamburger>div:after{
     content: '';
@@ -45,7 +45,7 @@
     height: 3px;
     border-radius: 1.5px;
     background-color: #ffffff;
-    transition: .4s;
+    transition: .2s;
 }
 .hamburger>div:before{
     top: -10px;
@@ -76,16 +76,16 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 50vw;
     height: 100vh;
     visibility: hidden;
     transition: .6s;
 }
 .menu>div{
     position: absolute;
-    width: 500px;
+    width: 300px;
     height: 500px;
-    border-radius: 20%;
+    border-radius: 50px;
     top: 50%;
     left: 50%;
     transform: translateX(-150%) translateY(-50%);
