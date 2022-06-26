@@ -60,24 +60,30 @@
                     if ($connection->connect_error) {
                         die("Error connecting:" . $connection->connect_error);
                     }
-                    $sql = "SELECT * from donar";
+                    $sql = "SELECT * from register";
                     $result = $connection->query($sql);
 
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
-                            echo "<tr><td>" . $row['id'] . "</td><td>" . $row['name'] . "</td><td>" . $row['blood_group'] . "</td><td>". $row['address']. "</td><td>".$row['phone']."</td></tr>";
+                            echo "<tr><td>" . $row['id'] . "</td><td>" . $row['full_name'] . "</td><td>" . $row['bloodgroup'] . "</td><td>". $row['address']. "</td><td>".$row['phone']."</td></tr>";
                         }
                         echo "</table>";
                     } else {
                         echo "No records found";
                     }
                     $connection->close();
+
+                    if(isset($_POST['back']))
+                    {
+                        header('location: home.html');
+                    }
                     ?>
                 </tbody>
             </table>
-            <div class="button">
-                <input type="submit" class="backbtn" name="backbtn" value="Back" />
+            <div class="input-group">
+                <button class="back" name="back">Back to home</button>
             </div>
+
 
         </form>
     </div>
