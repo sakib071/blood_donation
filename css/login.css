@@ -10,14 +10,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(135deg, rgb(206, 9, 69), rgb(94, 1, 29));
 
 }
 .container {
   width: 400px;
   min-height: 400px;
-  background: linear-gradient(135deg, rgb(206, 9, 69), rgb(94, 1, 29));
   border-radius: 15px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   padding: 40px 30px;
 }
 .container .login-text {
@@ -63,15 +62,19 @@ body {
 }
 .container .login-social a.facebook {
   background: #4256b1;
+  box-shadow: 1.3px 10px 10px rgb(94, 1, 29);
 }
 .container .login-social a.twitter {
   background: #1da1f2;
+  box-shadow: 1.3px 10px 10px rgb(94, 1, 29);
 }
 .container .login-social a.google {
   background: #db4a39;
+  box-shadow: 1.3px 10px 10px rgb(94, 1, 29);
 }
 .container .login-social a.linkedin {
   background: #0e76a8;
+  box-shadow: 1.3px 10px 10px rgb(94, 1, 29);
 }
 .container .login-social a.facebook:hover {
   background: #364791;
@@ -101,11 +104,11 @@ body {
   transition: 0.3s;
 }
 .container .login-email .input-group input:focus,
-.container .login-email .input-group input:valid {
+.container .login-email .input-group input valid {
   border: 3.5px solid rgb(253, 44, 117);
   transition: 0.3s;
+  box-shadow: 1.3px 10px 10px rgb(94, 1, 29);
 }
-
 .container .login-email .input-group .loginbtn,
 .regbtn {
   display: block;
@@ -123,6 +126,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  box-shadow: 1.3px 10px 10px rgb(94, 1, 29);
 }
 .container .login-email .input-group .loginbtn:hover,
 .regbtn:hover {
@@ -130,4 +134,10 @@ body {
   border-radius: 12px;
   color: #fff;
   transition: 0.3s;
+}
+.reg-text a {
+  color: #fff;
+}
+.reg-text a:hover {
+  color: rgb(204, 204, 204);
 }

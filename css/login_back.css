@@ -42,6 +42,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    box-shadow: 1.3px 10px 10px rgb(94, 1, 29);
 }
 .loginbackbtn:hover {
     background: linear-gradient(135deg, rgb(206, 9, 69), rgb(94, 1, 29));

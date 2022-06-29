@@ -76,6 +76,7 @@ form .user-details .input-box {
 .user-details .input-box valid {
   border: 3.5px solid rgb(253, 44, 117);
   transition: 0.1s;
+  box-shadow: 1.3px 10px 10px rgb(94, 1, 29);
 }
 form .gender-details .gender-title {
   font-size: 20px;
@@ -145,7 +146,10 @@ form .button input valid {
   text-decoration: none;
 }
 a{
-  color: rgb(222, 222, 222);
+  color: #fff;
+}
+a:hover{
+  color: rgb(205, 205, 205);
 }
 @media (max-width: 584px) {
   .container {
