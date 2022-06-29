@@ -15,8 +15,8 @@ if (isset($_POST['regbtn']))
         $full_name = $_POST['full_name'];
         $email = $_POST['email'];
         $phone = $_POST['phone'];
-        $password = md5($_POST['password']);
-        $confirm_password = md5($_POST['confirm_password']);
+        $password = ($_POST['password']);
+        $confirm_password = ($_POST['confirm_password']);
         $gender = $_POST['gender'];
         $bloodgroup = $_POST['bloodgroup'];
         $address = $_POST['address'];
@@ -25,7 +25,7 @@ if (isset($_POST['regbtn']))
         {
             $query = "SELECT * FROM REGISTER WHERE email = '$email' AND password = '$password'";
             $run = mysqli_query($connection, $query);
-            if(!$run -> num_rows > 0){
+            if($run -> num_rows > 0){
                 echo "Email already registered.";
             }else{
             $query = "INSERT INTO REGISTER(username,full_name,email,phone,password,confirm_password,gender,bloodgroup,address) VALUES('$username','$full_name','$email','$phone','$password','$confirm_password','$gender','$bloodgroup','$address')";
@@ -33,10 +33,7 @@ if (isset($_POST['regbtn']))
             if($run)
             {
                 echo "Registered";
-                $username = "";
-                $email = "";
-                $_POST['password'] = "";
-                $_POST['confirm_password'] = "";
+                header("Location: home2.html");
             }
             else
                 echo "Password not matched";

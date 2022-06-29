@@ -17,7 +17,10 @@ if (isset($_POST['loginbtn'])) {
    if($username == $_POST['username'])
    {
     if (mysqli_num_rows($query)>0){
-        header('location: profile.php');
+        session_start();
+        $_SESSION['username'] = $_POST['username'];
+        header('location: home2.html');
+        $sql = "INSERT INTO user(email) VALUES('$email')";
     }else{
         echo 'Wrong Password Or id';
         header('location: login_back.html');
@@ -28,6 +31,4 @@ if (isset($_POST['loginbtn'])) {
         header('location: login_back.html');
     }
 }
-
-
 ?>

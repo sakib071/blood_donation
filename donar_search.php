@@ -75,7 +75,7 @@
 
                     if(isset($_POST['back']))
                     {
-                        header('location: home.html');
+                        header('location: home2.html');
                     }
                     ?>
                 </tbody>
