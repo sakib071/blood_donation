@@ -1,6 +1,9 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,9 +25,6 @@
                 <thead>
                     <tr>
                         <th scope="col">
-                            <h3>Serial</h3>
-                        </th>
-                        <th scope="col">
                             <h3>Name</h3>
                         </th>
                         <th scope="col">
@@ -40,20 +40,21 @@
                 </thead>
                 <tbody>
                 <?php
+                    $uid = $_SESSION['username'];
                     $connection = mysqli_connect("localhost", "root", "", "blood_donation");
-                    if ($connection->connect_error) {
-                        die("Error connecting:" . $connection->connect_error);
-                    }
-                    $sql = "SELECT * from schedule";
+                    $sql = "SELECT * from schedule where username = '$uid'";
                     $result = $connection->query($sql);
 
+                    if($username = $uid)
+                    {
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
-                            echo "<tr><td>" . $row['id'] . "</td><td>" . $row['full_name'] . "</td><td>" . $row['bloodgroup'] . "</td><td>". $row['address']. "</td><td>".$row['phone']."</td></tr>";
+                            echo "</td><td>" . $row['full_name'] . "</td><td>" . $row['bloodgroup'] . "</td><td>". $row['address']. "</td><td>".$row['phone']."</td></tr>";
                         }
                         echo "</table>";
                     } else {
                         echo "No records found";
+                    }
                     }
                     $connection->close();
 
@@ -77,3 +78,8 @@
 </body>
 
 </html>
+
+<?php
+    exit();
+    $connection->close();
+?>

@@ -80,6 +80,7 @@ session_start();
             $uid = $_SESSION['username'];
             $sql="update register set email='$email', phone='$phone', password='$password', address='$address' where username='$uid'";
 	        $run = mysqli_query($connection, $sql);
+            header('Location: profile.php');
         }
         ?>
     </div>

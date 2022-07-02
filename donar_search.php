@@ -38,9 +38,6 @@
                 <thead>
                     <tr>
                         <th scope="col">
-                            <h3>Serial</h3>
-                        </th>
-                        <th scope="col">
                             <h3>Name</h3>
                         </th>
                         <th scope="col">
@@ -51,6 +48,9 @@
                         </th>
                         <th scope="col">
                             <h3>Phone</h3>
+                        </th>
+                        <th scope="col">
+                            <h3>Gender</h3>
                         </th>
                     </tr>
                 </thead>
@@ -65,7 +65,7 @@
 
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
-                            echo "<tr><td>" . $row['id'] . "</td><td>" . $row['full_name'] . "</td><td>" . $row['bloodgroup'] . "</td><td>". $row['address']. "</td><td>".$row['phone']."</td></tr>";
+                            echo "<tr><td>" . $row['full_name'] . "</td><td>" . $row['bloodgroup'] . "</td><td>". $row['address']. "</td><td>". $row['phone'] . "</td><td>" . $row['gender'] ."</td></tr>" ;
                         }
                         echo "</table>";
                     } else {
