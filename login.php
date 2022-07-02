@@ -14,21 +14,23 @@ if (isset($_POST['loginbtn'])) {
 
     $query = $connection->query($sql);
 
-   if($username == $_POST['username'])
-   {
+//    if($username == $_POST['username'])
+//    {
     if (mysqli_num_rows($query)>0){
         session_start();
         $_SESSION['username'] = $_POST['username'];
+        $_SESSION['email'] = $_POST['email'];
         header('location: home2.html');
-        $sql = "INSERT INTO user(email) VALUES('$email')";
+        $sql = "INSERT INTO user(email) VALUES('$username')";
+        $query = $connection->query($sql);
     }else{
         echo 'Wrong Password Or id';
         header('location: login_back.html');
     }
-    }
-    else{
-        echo 'Wrong Password Or id';
-        header('location: login_back.html');
-    }
+    // }
+    // else{
+    //     echo 'Wrong Password Or id';
+    //     header('location: login_back.html');
+    // }
 }
 ?>

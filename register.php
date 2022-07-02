@@ -32,6 +32,8 @@ if (isset($_POST['regbtn']))
             $run =  mysqli_query($connection, $query);
             if($run)
             {
+                session_start();
+                $_SESSION['username'] = $_POST['username'];
                 echo "Registered";
                 header("Location: home2.html");
             }

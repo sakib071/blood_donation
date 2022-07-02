@@ -10,7 +10,6 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
     <link rel="stylesheet" type="text/css" href="css/profile.css">
     <title>Profile</title>
 </head>
@@ -71,11 +70,26 @@ session_start();
         </form>';
         }
         
+        if(isset($_POST['updatebtn']))
+        {
+            $email = $_POST['email'];
+            $phone = $_POST['phone'];
+            $password = $_POST['password'];
+            $address = $_POST['address'];
+            
+            $uid = $_SESSION['username'];
+            $sql="update register set email='$email', phone='$phone', password='$password', address='$address' where username='$uid'";
+	        $run = mysqli_query($connection, $sql);
+        }
         ?>
     </div>
     
 
     <?php
+    
+    if (isset($_POST['backtohome'])) {
+        header('Location: home2.html');
+    }
     exit();
     $connection->close();
     ?>
