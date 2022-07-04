@@ -9,25 +9,25 @@ $connection = mysqli_connect($server, $user, $pass, $database);
 
 if (isset($_POST['subbtn'])) 
 {
-    if (!empty($_POST['username']) && !empty($_POST['full_name']) && !empty($_POST['email']) && !empty($_POST['gender']) && !empty($_POST['bloodgroup'])) 
+    if (!empty($_POST['username']) && !empty($_POST['full_name']) && !empty($_POST['email']) && !empty($_POST['phone']) && !empty($_POST['date']) && !empty($_POST['bloodgroup']) && !empty($_POST['address'])) 
     {
         $username = $_POST['username'];
         $full_name = $_POST['full_name'];
         $email = $_POST['email'];
         $phone = $_POST['phone'];
-        $gender = $_POST['gender'];
+        $date = $_POST['date'];
         $bloodgroup = $_POST['bloodgroup'];
         $address = $_POST['address'];
         if($run -> num_rows > 0){
             //
         }else{
-        $query = "INSERT INTO schedule(username,full_name,email,phone,gender,bloodgroup,address) VALUES('$username','$full_name','$email','$phone','$gender','$bloodgroup','$address')";
+        $query = "INSERT INTO schedule(username,full_name,email,phone,date,bloodgroup,address) VALUES('$username','$full_name','$email','$phone','$date','$bloodgroup','$address')";
         $run =  mysqli_query($connection, $query);
         if($run)
         {
             session_start();
             $_SESSION['username'] = $_POST['username'];
-            echo "Registered";
+            echo "Appointment submitted";
             header("Location: home2.html");
         }
         else

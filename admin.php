@@ -1,3 +1,6 @@
+<?php
+include('delete.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +19,7 @@
         <h1>HELP AND BE HELPED</h1>
     </div>
     <div class="container">
-        <div class="title">Search Donar</div>
+        <div class="title">Search Donor</div>
         <form action="delete.php" method="post" class="form">
             <table class="table">
                 <thead>
@@ -56,10 +59,11 @@ if($run){
                 <th><?php echo $row['email']; ?></th>
                 <th><?php echo $row['phone']; ?></th>
 
-                <form class="delete.php" method="post">
-                    <input type="hidden" name="username" value="<?php echo $row['username'] ?>">
-                    <th> <input type="submit" name="delete" class="btn btn-danger" value="Delete"></th>
-                </form>
+                <form class="dlt" action="delete.php" method="post">
+                <?php $dlter=$row['username']; 
+                    echo '<td><button class=btn btn-danger><a href="delete.php?delete='.$dlter.'">Delete</a></button></td>'
+                    ?>
+                    </form>
             </tr>
         </tbody>
         <?php

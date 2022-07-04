@@ -36,6 +36,9 @@ session_start();
                         <th scope="col">
                             <h3>Phone</h3>
                         </th>
+                        <th scope="col">
+                            <h3>Date</h3>
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -49,7 +52,7 @@ session_start();
                     {
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
-                            echo "</td><td>" . $row['full_name'] . "</td><td>" . $row['bloodgroup'] . "</td><td>". $row['address']. "</td><td>".$row['phone']."</td></tr>";
+                            echo "</td><td>" . $row['full_name'] . "</td><td>" . $row['bloodgroup'] . "</td><td>". $row['address']. "</td><td>".$row['phone']."</td><td>" . $row['date'] . "</td></tr>";
                         }
                         echo "</table>";
                     } else {

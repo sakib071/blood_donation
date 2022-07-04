@@ -24,7 +24,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="css/donar_search.css">
-    <title>Search Donar</title>
+    <title>Search Donor</title>
 </head>
 
 <body>
@@ -32,7 +32,7 @@
         <h1>HELP AND BE HELPED</h1>
     </div>
     <div class="container">
-        <div class="title">Search Donar</div>
+        <div class="title">Search Donor</div>
         <form action="donar_search.php" method="post" class="form">
             <table class="table">
                 <thead>
