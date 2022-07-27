@@ -75,7 +75,7 @@ INSERT INTO `register` (`id`, `username`, `full_name`, `email`, `phone`, `passwo
 (7, 'miskat01', 'Miskatul Karim', 'miskat@gmail.com', '01252114528', 'b706835de79a2b4e80506f582af367', 'b706835de79a2b4e80506f582af367', 'Male', 'A+', 'Dhaka'),
 (8, 'miskat02', 'Miskatul Karim', 'miskatul@gmail.com', '01452114785', '333', '333', 'Male', 'A+', 'Khulna'),
 (9, 'tasnim071', 'Tasnim Chowdhury', 'tasnim@gmail.com', '01452116325', 'tasnim071', 'tasnim071', 'Female', 'O+', 'Jamal Khan'),
-(10, 'hamid', 'Anila Khanam', 'anika@gmail.com', '01752336214', 'anika031', 'anika031', 'Female', 'AB+', 'Chawkbazar'),
+(10, 'anika', 'Anika Khanam', 'anika@gmail.com', '01752336214', 'anika031', 'anika031', 'Female', 'AB+', 'Chawkbazar'),
 (11, 'ashraf031', 'Mohammad Ashraf', 'ashraf031@gmail.com', '014523621', 'ashraf031', 'ashraf031', 'Male', 'A+', 'Chawkbazar'),
 (12, 'shuvo', 'Shuvo Das', 'shuvo@gmail.com', '014582336', 'shuvo11', 'shuvo11', 'Male', 'A+', 'Andorkilla'),
 (13, 'malek', 'Malek khan', 'malek@gmail.com', '014528745', '444', '444', 'Male', 'B+', 'CTG'),
