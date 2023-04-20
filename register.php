@@ -28,7 +28,8 @@ if (isset($_POST['regbtn']))
             if($run -> num_rows > 0){
                 echo "Email already registered.";
             }else{
-            $query = "INSERT INTO REGISTER(username,full_name,email,phone,password,confirm_password,gender,bloodgroup,address) VALUES('$username','$full_name','$email','$phone','$password','$confirm_password','$gender','$bloodgroup','$address')";
+            $enc_password = password_hash($password, PASSWORD_DEFAULT);
+            $query = "INSERT INTO REGISTER(username,full_name,email,phone,password,confirm_password,gender,bloodgroup,address) VALUES('$username','$full_name','$email','$phone','$enc_password','$confirm_password','$gender','$bloodgroup','$address')";
             $run =  mysqli_query($connection, $query);
             if($run)
             {

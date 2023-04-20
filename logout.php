@@ -3,5 +3,5 @@ session_start();
 unset($_SESSION['username']);
 session_destroy();
 session_write_close();
-header("Location: home.html");
+header("Location: index.html");
 ?>
